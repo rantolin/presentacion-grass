@@ -73,8 +73,8 @@
 
 %% CONFIGURACIÓN GEENERAL DE HIPERVÍNCULOS
 \hypersetup{%
-    baseurl={roberto.antolin@mat.ucm.es},
-    pdftitle={Modelos digitales y filtros LiDAR},%
+    baseurl={roberto.antolin@forestry.gsi.gov.uk},
+    pdftitle={Filtro de datos LiDAR con GRASS},%
     pdfauthor={Roberto Antol\'{i}n S\'anchez},%
     pdfcreator={Roberto Antol\'{i}n S\'anchez},%
     pdfproducer=PDFLaTeX,%
@@ -142,8 +142,7 @@ commentstyle=\color{fondoO!50!green}\itshape
 \lstdefinestyle{grass}{                                                                     
   language=sh,
   basicstyle=\ttfamily\scriptsize,%
-  morekeywords={v.lidar.edgedetection,v.lidar.growing,
-  v.lidar.correction,v.surf.bspline,v.outlier},
+  morekeywords={v.lidar.edgedetection,v.lidar.growing, v.lidar.correction,v.surf.bspline,v.outlier},
   keywordstyle=\bfseries\color{ZurichBlue},classoffset=1,
   commentstyle=shape\color{green!75!black},%
   morekeywords={GRASS6 (stuttgart):, >}
@@ -177,17 +176,16 @@ commentstyle=\color{fondoO!50!green}\itshape
 \author[R. Antolín]
     {Roberto Antolín Sánchez}
 
-\institute[UCM]{
-        Prof. Titular Interino \\
-	Sec. Dptal. Astronomía y Geodesia\\
-        Facultad de CC. Matemáticas (UCM)\\
-	Plaza de Ciencias, 3\\
-	Madrid -- 28040\\
-	\texttt{roberto.antolin@mat.ucm.es}\\
+\institute[FR]{
+  Investigador y desarrollador \\
+	Forest Research \\
+  Northern Research Station \\
+	Roslin EH25 9SY \\
+	\texttt{roberto.antolin@forestry.gsi.gov.uk}\\
 }
 
 %% FECHA DE LA PRESENTACIÓN
-\date[07-05-2013]{7 de Mayo de 2013}
+\date[15-03-2014]{15 de Marzo de 2014}
 
 \AtBeginSection[]
 {
@@ -198,9 +196,5 @@ commentstyle=\color{fondoO!50!green}\itshape
 }
 
 \begin{document}
-%\includeonlyframes{cc}
-%intro3,intro4,funciona,ventajas1,ventajas2,ventajas3
-%desventajas,miktex,miktex2,editores,otrasherr
-%\input{filtro}
-\input{filtrograss}
+  \input{grass}
 \end{document}
