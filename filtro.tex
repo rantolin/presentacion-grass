@@ -105,13 +105,11 @@
 %%==================================================================F
 \begin{frame}
   \frametitle{Detección de bordes}
-\begin{beamerboxesrounded}[shadow=true]{Definición: \emph{Borde}}
-     \alt{\alert{NO} es un señor antipático $\Rightarrow$ \alert{NO} 
-        es tu jefe}{Es una fuerte variación en altura correspondiente a una 
-        pequeña variación en planimetría}
-    \end{beamerboxesrounded}
+  \begin{beamerboxesrounded}[shadow=true]{Definición: \emph{Borde}}
+       Es una fuerte variación en altura correspondiente a una pequeña variación en planimetría
+  \end{beamerboxesrounded}
 
-  \begin{picture}(0,100)
+  \begin{picture}(0,80)
     %\centering
     \begin{tikzpicture}[scale=0.7]
     \draw[thick] (-5,0) -- (2.5,0);
@@ -125,8 +123,8 @@
     \node[anchor=west] at (-1,1){Objeto};
     \end{tikzpicture}
   \end{picture}
-  \begin{picture}(0,100)
-     \uncover{\put(200,-5){\includegraphics[height=30mm]{images/height_edge}}}
+  \begin{picture}(0,80)
+     \uncover{\put(175,-5){\includegraphics[height=25mm]{images/height_edge}}}
   \end{picture}
 \begin{enumerate}
  \item El análisis de bordes no es fácil porque los puntos no están distribuidos regularmente
@@ -306,9 +304,9 @@ Y por el tipo de impulso:
    \begin{column}{0.45\textwidth}
    \begin{figure}[h!]
    \centering
-      \only<1>{\includegraphics[height=40mm]{images/fumo}}
-      \only<2>{\includegraphics[height=40mm]{images/google_techos}}
-      \only<3>{\includegraphics[height=40mm]{images/terrazas}}
+      \only<1>{\includegraphics[height=35mm]{images/fumo}}
+      \only<2>{\includegraphics[height=35mm]{images/google_techos}}
+      \only<3>{\includegraphics[height=35mm]{images/terrazas}}
    \end{figure}
    \end{column}
   \end{columns}
@@ -329,7 +327,7 @@ superficie bastante lisa.
   \begin{minipage}{0.45\textwidth}
    \begin{figure}[h!]
    \centering
-      \includegraphics[height=20mm]{images/correct_objeto}
+      \includegraphics[height=20mm]{images/correct_objeto}\\
       \includegraphics[height=20mm]{images/correct_terreno}
    \end{figure}
   \end{minipage}
@@ -548,38 +546,6 @@ vegetación y edificio.}
 \begin{frame}
   \frametitle{Solapes}
     \begin{figure}[h!]
-      \centering
-      \only{\includegraphics[width=0.65\textwidth]{images/errores_aspect}}
-      \only{\includegraphics[width=0.65\textwidth]{images/errores_aspect_mascara}}
-      \only{\includegraphics[width=0.65\textwidth]{images/error_interpolacion_solapes}}
-    \end{figure}
-\end{frame}
-%%==================================================================F
-%\begin{frame}
-%  \frametitle{Computación}
-%    \begin{table}[h!]
-%      \centering
-%    \begin{tabular}{ccrrr}
-%    \toprule
-%    \multicolumn{5}{c}{\bfseries Interpolación Bilinear} \\
-%    \hline
-%    \bfseries Paso de Spline & \bfseries Número de teselas & \bfseries
-%    tradicional & \bfseries teselado & \bfseries gain \\ 
-%    % (m) & (NSxEW) & (time) & (time) & \\
-%    \hline\hline
-%    1 & 16x16 & 2h16m42s & 1h33m47s & 31,4\% \\ 
-%    2 & 8x8 & 32m33s & 22m18s & 31,5\% \\ 
-%    4 & 4x4 & 8m03s & 6m10s & 23,4\%\\ 
-%    8 & 2x2 & 2m18s & 2m30s & -8,7\% \\
-%    16 & 1x1 & 1m01s & 1m41s & -65,6\% \\
-%    \bottomrule
-%    \end{tabular}
-%    \end{table}
-%\end{frame}
-%%==================================================================F
-\begin{frame}
-  \frametitle{Solapes}
-    \begin{figure}[h!]
 \centering
 \begin{tikzpicture}[scale=0.50]
   \filldraw[fill=gray!40!white]   
@@ -620,6 +586,38 @@ vegetación y edificio.}
     \end{tikzpicture}
     \end{figure}
 \end{frame}
+%%==================================================================F
+\begin{frame}
+  \frametitle{Solapes}
+    \begin{figure}[h!]
+      \centering
+      \only<1>{\includegraphics[width=0.6\textwidth]{images/errores_aspect}}
+      \only<2>{\includegraphics[width=0.6\textwidth]{images/errores_aspect_mascara}}
+      \only<3>{\includegraphics[width=0.6\textwidth]{images/error_interpolacion_solapes}}
+    \end{figure}
+\end{frame}
+%%==================================================================F
+%\begin{frame}
+%  \frametitle{Computación}
+%    \begin{table}[h!]
+%      \centering
+%    \begin{tabular}{ccrrr}
+%    \toprule
+%    \multicolumn{5}{c}{\bfseries Interpolación Bilinear} \\
+%    \hline
+%    \bfseries Paso de Spline & \bfseries Número de teselas & \bfseries
+%    tradicional & \bfseries teselado & \bfseries gain \\ 
+%    % (m) & (NSxEW) & (time) & (time) & \\
+%    \hline\hline
+%    1 & 16x16 & 2h16m42s & 1h33m47s & 31,4\% \\ 
+%    2 & 8x8 & 32m33s & 22m18s & 31,5\% \\ 
+%    4 & 4x4 & 8m03s & 6m10s & 23,4\%\\ 
+%    8 & 2x2 & 2m18s & 2m30s & -8,7\% \\
+%    16 & 1x1 & 1m01s & 1m41s & -65,6\% \\
+%    \bottomrule
+%    \end{tabular}
+%    \end{table}
+%\end{frame}
 %%==================================================================FIN
 \begin{frame}
  \titlepage
